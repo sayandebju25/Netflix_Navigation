@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Netflix Mpbile Navigation</title>
+</head>
+<body>
+    <button id="openButton" class="nav-btn open-btn">
+        <i class="fas fa-bars"></i>
+     </button> 
+   <img src="./netflix.png" alt="logo" class="logo">
+    <p>Mobile Navigation</p>
+
+    <div class="nav nav-black">
+        <div class="nav nav-red">
+            <div class="nav nav-white">
+                <button id="closeButton" class="nav-btn close-btn">
+                    <i class="fas fa-times"></i>
+                 </button>
+              <img src="./netflix.png" alt="logo" class="logo">
+               <ul class="list">
+                <li><a href="https://jobs.netflix.com/teams">Teams</a></li>
+                <li><a href="https://www.netflix.com/in/">Location</a></li>
+                <li><a href="https://jobs.netflix.com/work-life-philosophy">Life at Netflix</a></li>
+                 <li>
+                    <ul>
+                        <li><a href="https://jobs.netflix.com/culture">Netflix culture memo</a></li> 
+                        <li><a href="https://jobs.netflix.com/work-life-philosophy">Wark life balance</a></li> 
+                        <li><a href="https://jobs.netflix.com/inclusion">Inclusion & diversit</a></li> 
+                        <li><a href="https://jobs.netflix.com/blog">Blog</a></li> 
+                       
+                    </ul>
+                 </li>  
+            </ul>
+             
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const open_btn = document.getElementById('openButton');
+        const close_btn = document.getElementById('closeButton');
+        const nav = document.querySelectorAll('.nav'); // Define 'nav' variable
+        
+        open_btn.addEventListener('click',()=>{
+            nav.forEach(nav_el=>nav_el.classList.add('visible'));
+        });
+
+        close_btn.addEventListener('click',()=>{
+            nav.forEach(nav_el=>nav_el.classList.remove('visible'));
+        });
+    </script>    
+</body>
+</html>
